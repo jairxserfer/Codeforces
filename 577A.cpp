@@ -89,6 +89,7 @@
 
 using  namespace std;
 vector<bool> is_prime(10000001);
+/*
 void sieve_atkins(ll int n)
 {
 
@@ -156,14 +157,23 @@ ll int solution(ll int size, ll int number){
   }
   return cont;
 }
-
+*/
 
 int main(){
 
-  ll  size, number;
-  ll aleards = 10000000;
-  sieve_atkins(aleards);
-  cin>>size>>number;
-  cout<<solution(size,number)<<endl;
-  return 0;
+  ll n, x;
+
+     cin>>n>>x;
+     int c= 0;
+     if(x <= n) c++;
+
+     for(int i= 2; i<= n; i++){
+         if(x%i == 0 && x/i <= n){
+             c++;
+         }
+     }
+
+     cout<< c <<endl;
+
+     return 0;
 }

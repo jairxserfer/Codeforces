@@ -87,20 +87,20 @@
 #define  ll long long
 #define MAX 100001
 
-using namespace std;
+using  namespace std;
 
+int main() {
+	int i, n, t, k, w;
+	long long sum=0;
 
-int main(int argc, char const *argv[]) {
-  ll n, m , i = 0;
-  cin >> n >> m;
-  if (n > m) {
-      i = m;
-  } else {
-      i = n;
-  }
-  if (i % 2 == 0) {
-      cout << "Malvika";
-  } else {
-      cout << "Akshat";
-  }
+	cin>> k>>n>>w;
+	for(i=1; i<=w; i++){
+		sum = sum+(i*k);
+	}
+	if(sum<= n){
+		cout <<0<<"\n";
+	}
+	else cout << sum - n << "\n";
+
+	return 0;
 }
